@@ -45,6 +45,7 @@ function App() {
   console.log(`Users State:`, users)
   return (
     <div className="App">
+      <div className="App-Wrapper">
       <header className="App-header">
  
           <h1>Node API I Project</h1>
@@ -67,6 +68,7 @@ function App() {
             <UsersWrapper setFetch={setFetch} users={users}/>
           </div>
       </header>
+      </div>
     </div>
   );
 }

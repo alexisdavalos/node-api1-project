@@ -1,3 +1,6 @@
+body{
+  background: #282c34;
+}
 .App {
   text-align: center;
   width:100%;
@@ -23,6 +26,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-Wrapper{
+  width: 1000px;
+  margin: 0 auto;
 }
 
 
