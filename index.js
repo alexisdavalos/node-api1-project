@@ -1,13 +1,14 @@
 // implement your API here
 // import express from 'express'; //ES2015 Modules
 const express = require('express'); //CommonJS Modules // npm i express
-
+const cors = require('cors')
 const Users = require('./data/db')
 const server = express();
 
+
 //teaches express how to read JSON from the body of request
 server.use(express.json()); // needed for POST and PUT/PATCh
-
+server.use(cors())
 server.get('/', (req, res) => {
     res.json({ hello: 'Web26' })
 })
