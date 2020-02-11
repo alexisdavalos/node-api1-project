@@ -3,12 +3,14 @@ import User from './User'
 
 const UsersWrapper = (props) =>{
     return(
-        <div>
-            <h3>Users In Database:</h3>
-            {props.users.map(user=>(
-                <User key={user.id} user={user} />
-            ))}
-        </div>
+        <>
+         <h3>Users In Database:</h3>
+            <div className='usersWrapper'>
+                {props.users.map(user=>(
+                    <User setFetch={props.setFetch} key={user.id} user={user} />
+                ))}
+            </div>
+        </>
     )
 }
 
