@@ -61,7 +61,8 @@ server.put('/api/users/:id',  (req, res) =>{
     console.log('request body:', req.body)
     const updatedUser = req.body;
  
-    (updatedUser.name === '' || updatedUser ==='') ? res.status(200).json({ errorMessage: "Please provide name and bio for the user." }) : Users.update(req.params.id, updatedUser).then(updateResponse =>{
+    (updatedUser.name === '' || updatedUser ==='') ? res.status(200).json({ errorMessage: "Please provide name and bio for the user." }) : Users.update(req.params.id, updatedUser)
+    .then(updateResponse =>{
         console.log('UpdateResponse',updateResponse)
         if(updateResponse === 1){
             res.status(200).json({...updatedUser, message: "successfully updated"})
